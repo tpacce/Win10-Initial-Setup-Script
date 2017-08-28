@@ -3,6 +3,7 @@
 # Author: Disassembler <disassembler@dasm.cz>
 # Version: 2.7, 2017-08-19
 # Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
+# Custom Preset v1
 ##########
 
 # Default preset
@@ -37,7 +38,7 @@ $tweaks = @(
 	"DisableUpdateRestart",         # "EnableUpdateRestart",
 	"DisableHomeGroups",            # "EnableHomeGroups",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	"DisableRemoteDesktop",         # "EnableRemoteDesktop",
 	"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
 	# "DisableDefragmentation",     # "EnableDefragmentation",
@@ -65,10 +66,10 @@ $tweaks = @(
 	"HideSyncNotifications"         # "ShowSyncNotifications",
 	"HideRecentShortcuts",          # "ShowRecentShortcuts",
 	"ExplorerThisPC",               # "ExplorerQuickAccess",
-	"ShowThisPCOnDesktop",          # "HideThisPCFromDesktop",
+	"HideThisPCOnDesktop",          # "ShowThisPCFromDesktop",
 	"HideDesktopFromThisPC",        # "ShowDesktopInThisPC",
-	"HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
-	"HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
+	"ShowDocumentsFromThisPC",      # "HideDocumentsInThisPC",
+	"ShowDownloadsFromThisPC",      # "HideDownloadsInThisPC",
 	"HideMusicFromThisPC",          # "ShowMusicInThisPC",
 	"HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
 	"HideVideosFromThisPC",         # "ShowVideosInThisPC",
@@ -77,13 +78,13 @@ $tweaks = @(
 	# "EnableNumlock",              # "DisableNumlock",
 
 	### Application Tweaks ###
-	"DisableOneDrive",              # "EnableOneDrive",
-	"UninstallOneDrive",            # "InstallOneDrive",
+	# "EnableOneDrive",             # "DisableOneDrive",
+	# "InstallOneDrive",            # "UninstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
 	"DisableConsumerApps",          # "EnableConsumerApps",
-	"DisableXboxFeatures",          # "EnableXboxFeatures",
+	# "DisableXboxFeatures",        # "EnableXboxFeatures",
 	# "UninstallMediaPlayer",       # "InstallMediaPlayer",
 	# "UninstallWorkFolders",       # "InstallWorkFolders",
 	# "InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
@@ -1191,10 +1192,10 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.MicrosoftStickyNotes" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.OneConnect" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.WindowsFeedbackHub" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
+	# Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftPowerBIForWindows" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.NetworkSpeedTest" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
+	# Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Microsoft3DViewer" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.RemoteDesktop" | Remove-AppxPackage
 }
